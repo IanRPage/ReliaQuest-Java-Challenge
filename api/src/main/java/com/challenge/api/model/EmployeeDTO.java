@@ -10,7 +10,6 @@ public class EmployeeDTO {
     private String jobTitle;
     private String email;
     private Instant contractHireDate;
-    private Instant contractTerminationDate;
 
     public String getFirstName() {
         return firstName;
@@ -66,13 +65,5 @@ public class EmployeeDTO {
 
     public void setContractHireDate(Instant date) {
         this.contractHireDate = date;
-    }
-
-    public Instant getContractTerminationDate() {
-        return contractTerminationDate;
-    }
-
-    public void setContractTerminationDate(Instant date) {
-        this.contractTerminationDate = date;
     }
 }

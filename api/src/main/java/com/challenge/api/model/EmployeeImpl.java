@@ -2,26 +2,33 @@ package com.challenge.api.model;
 
 import java.time.Instant;
 import java.util.UUID;
+import lombok.NonNull;
 
 public class EmployeeImpl implements Employee {
     private UUID uuid;
+    @NonNull
     private String firstName;
+    @NonNull
     private String lastName;
     private String fullName;
+    @NonNull
     private Integer salary;
+    @NonNull
     private Integer age;
+    @NonNull
     private String jobTitle;
+    @NonNull
     private String email;
     private Instant contractHireDate;
     private Instant contractTerminationDate;
 
     public EmployeeImpl(
-            String firstName,
-            String lastName,
-            Integer salary,
-            Integer age,
-            String jobTitle,
-            String email,
+            @NonNull String firstName,
+            @NonNull String lastName,
+            @NonNull Integer salary,
+            @NonNull Integer age,
+            @NonNull String jobTitle,
+            @NonNull String email,
             Instant contractHireDate) {
         this.firstName = firstName;
         this.lastName = lastName;
