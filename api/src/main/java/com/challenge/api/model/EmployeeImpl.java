@@ -34,7 +34,6 @@ public class EmployeeImpl implements Employee {
         // assume contract hire is now if hire date isn't specified
         this.contractHireDate = contractHireDate != null ? contractHireDate : Instant.now();
 
-        // TODO: MAYBE add termination date as param
         this.contractTerminationDate = null;
     }
 

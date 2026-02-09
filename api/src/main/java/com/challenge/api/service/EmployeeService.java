@@ -50,7 +50,6 @@ public class EmployeeService {
         return employees.get(uuid);
     }
 
-    // TODO: add error exception handling
     public Employee createEmployee(EmployeeDTO params) {
         EmployeeImpl employee = new EmployeeImpl(
                 params.getFirstName(),
