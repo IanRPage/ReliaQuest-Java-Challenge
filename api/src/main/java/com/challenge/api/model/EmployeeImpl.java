@@ -1,7 +1,7 @@
 package com.challenge.api.model;
 
 import java.time.Instant;
-import java.utils.UUID;
+import java.util.UUID;
 
 public class EmployeeImpl implements Employee {
     private UUID uuid;
@@ -14,6 +14,29 @@ public class EmployeeImpl implements Employee {
     private String email;
     private Instant contractHireDate;
     private Instant contractTerminationDate;
+
+    public EmployeeImpl(
+            String firstName,
+            String lastName,
+            Integer salary,
+            Integer age,
+            String jobTitle,
+            String email,
+            Instant contractHireDate) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.fullName = firstName + " " + lastName;
+        this.salary = salary;
+        this.age = age;
+        this.jobTitle = jobTitle;
+        this.email = email;
+
+        // assume contract hire is now if hire date isn't specified
+        this.contractHireDate = contractHireDate != null ? contractHireDate : Instant.now();
+
+        // TODO: MAYBE add termination date as param
+        this.contractTerminationDate = null;
+    }
 
     @Override
     public UUID getUuid() {
