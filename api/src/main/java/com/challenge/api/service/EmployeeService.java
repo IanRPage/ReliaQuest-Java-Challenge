@@ -28,7 +28,7 @@ public class EmployeeService {
         e1.setUuid(UUID.randomUUID());
         employees.put(e1.getUuid(), e1);
 
-        EmployeeImpl e2 = new EmployeeImpl("Ashton", "Page", 1e7, 2, "CEO", "apage@reliaquest.com", Instant.now());
+        EmployeeImpl e2 = new EmployeeImpl("Ashton", "Page", 1000000, 2, "CEO", "apage@reliaquest.com", Instant.now());
         e2.setUuid(UUID.randomUUID());
         employees.put(e2.getUuid(), e2);
     }
@@ -51,7 +51,7 @@ public class EmployeeService {
     }
 
     // TODO: add error exception handling
-    public Eployee createEmployee(EmployeeDTO params) {
+    public Employee createEmployee(EmployeeDTO params) {
         EmployeeImpl employee = new EmployeeImpl(
                 params.getFirstName(),
                 params.getLastName(),
@@ -60,8 +60,8 @@ public class EmployeeService {
                 params.getJobTitle(),
                 params.getEmail(),
                 params.getContractHireDate());
-        emp.setUuid(UUID.randomUUID());
-        employees.put(emp.getUuid(), emp);
-        return emp;
+        employee.setUuid(UUID.randomUUID());
+        employees.put(employee.getUuid(), employee);
+        return employee;
     }
 }
