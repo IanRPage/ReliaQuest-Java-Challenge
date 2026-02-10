@@ -6,19 +6,21 @@ import lombok.NonNull;
 
 public class EmployeeImpl implements Employee {
     private UUID uuid;
-    @NonNull
-    private String firstName;
-    @NonNull
-    private String lastName;
+
+    @NonNull private String firstName;
+
+    @NonNull private String lastName;
+
     private String fullName;
-    @NonNull
-    private Integer salary;
-    @NonNull
-    private Integer age;
-    @NonNull
-    private String jobTitle;
-    @NonNull
-    private String email;
+
+    @NonNull private Integer salary;
+
+    @NonNull private Integer age;
+
+    @NonNull private String jobTitle;
+
+    @NonNull private String email;
+
     private Instant contractHireDate;
     private Instant contractTerminationDate;
 
